@@ -1,0 +1,12 @@
+<md-card *ngIf='project'>
+  <md-card-header>
+    <md-card-title>{{project.title}}</md-card-title>
+  </md-card-header>
+  <h6>Author: {{project.author}}</h6>
+  <md-nav-list>
+    <app-tasklist [project_id]=id></app-tasklist>
+  </md-nav-list>
+</md-card>
+
+<md-spinner *ngIf='showSpinner'></md-spinner>
+<button class='btn-add' md-fab (click)="openDialog()"><md-icon>add</md-icon></button>

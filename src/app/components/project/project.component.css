@@ -1,0 +1,23 @@
+md-card {
+    padding: 5px;
+    margin-bottom: 5px;
+}
+md-card-header {
+    background: #3f51b5;
+    padding: 10px;
+}
+
+md-card-title {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: white;
+    text-decoration: none;
+    /*font-family: Roboto,Helvetica Neue,sans-serif;*/
+    text-transform: uppercase;
+}
+
+.btn-add {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+}

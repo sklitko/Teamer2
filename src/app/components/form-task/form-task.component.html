@@ -1,0 +1,6 @@
+<form #f="ngForm" (submit)="onAddSubmit()">
+  <md-input-container class="full-width">
+    <input mdInput placeholder="Task Title" [(ngModel)]="title" name="title" required>
+  </md-input-container>
+  <button md-raised-button type="submit" (click)='onAddSubmit()' [disabled]="!f.form.valid" [md-dialog-close]="true">SUBMIT</button>
+</form>

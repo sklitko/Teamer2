@@ -1,0 +1,15 @@
+<md-card *ngFor="let project of projects">
+  <md-card-header>
+    <md-card-title><a [routerLink]="[project.$key]">{{project.title}}</a></md-card-title>
+    <button md-button (click)="openDialogTask(project.$key)"><md-icon>add_box</md-icon></button>
+     <button md-button (click)="deleteProject(project.$key)"><md-icon>delete</md-icon></button> 
+  </md-card-header>
+  <md-nav-list>
+    <app-tasklist [project_id]="project.$key"></app-tasklist>
+  </md-nav-list>
+</md-card>
+
+<md-spinner class="spinner" *ngIf='showSpinner'></md-spinner>
+
+<!--<a md-fab class='btn-add-project' routerLink="/add-project"><md-icon>add</md-icon></a>-->
+<button class='btn-add' md-fab (click)="openDialog()"><md-icon>add</md-icon></button>

@@ -1,0 +1,13 @@
+<md-list>
+  <md-list-item *ngFor="let message of messages">
+    <h3 md-line class="author"> {{message.author}} </h3>
+    <p md-line class="demo-2"> {{message.text}} </p>
+  </md-list-item>
+</md-list>
+<form #forma="ngForm" (submit)="AddMessage()">
+<md-input-container class="example-full-width">
+      <textarea mdInput placeholder="Messages" [(ngModel)]="text"  name="text" required></textarea>
+</md-input-container>
+<button md-raised-button type="submit" [disabled]="!forma.form.valid">ADD MESSAGE</button>
+</form>
+

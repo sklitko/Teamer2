@@ -1,0 +1,9 @@
+<md-card *ngIf="project">
+  <md-card-header>
+    <md-card-title *ngIf="task">{{task.title}}</md-card-title>
+    <md-card-subtitle>{{project.title}}</md-card-subtitle>
+  </md-card-header>
+  <app-messages></app-messages>
+</md-card>
+
+<md-spinner *ngIf='showSpinner'></md-spinner>
